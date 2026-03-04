@@ -217,6 +217,10 @@
   cursor: pointer;
   background: transparent;
   border-radius: 0;
+  transition: transform 0.3s ease;
+}
+.mdn-welcome-card:hover {
+  transform: translateY(-8px);
 }
 .mdn-welcome-icon {
   width: 40px;
