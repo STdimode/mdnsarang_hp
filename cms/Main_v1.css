@@ -45,7 +45,7 @@
   width: 100%;
   z-index: 50;
   background: rgba(30,40,60,0.5);
-  height: 76px;
+  height: 100px;
 }
 
 .mdn-container {
@@ -63,6 +63,7 @@
   align-items: center;
   gap: 8px;
 }
+.cms-logo-img{height:50px;}
 
 .mdn-logo-text {
   color: white;
@@ -86,6 +87,11 @@
   color: white;
   font-size: 20px;
   font-weight: 400;
+  text-decoration: none;
+}
+
+.mdn-nav-link:hover {
+  color: white;
   text-decoration: none;
 }
 
@@ -184,8 +190,7 @@
 .mdn-welcome-h2 {
   font-size: 32px;
   font-weight: 700;
-  font-style: italic;
-  color: #4A90D9;
+  color: #7ebdff;
   margin-bottom: 14px;
 }
 .mdn-welcome-p {
@@ -330,6 +335,7 @@
   color: rgba(255,255,255,0.7);
   font-size: 17px;
   margin-bottom: 40px;
+  word-break:keep-all;
 }
 .mdn-cs-grid {
   display: grid;
@@ -387,7 +393,6 @@
 .mdn-gallery-h2 {
   font-size: 32px;
   font-weight: 700;
-  font-style: italic;
   color: #222;
   text-align: center;
   margin-bottom: 32px;
@@ -509,4 +514,22 @@
 .mdn-footer-p5 {
   color: rgba(255,255,255,0.5);
   font-size: 16px;
+}
+
+
+
+@media (max-width: 768px) {
+	.mdn-header{height:60px;}
+	.mdn-hero {
+	aspect-ratio:7/9;
+    height: auto;}
+	.cms-logo-img {
+    height: 30px;}
+	.mdn-cs-h2{font-size: 24px;}
+	.mdn-cs-card-title {
+	font-size: 22px;}
+	.mdn-cs-card{padding: 25px;}
+	.mdn-cs-icon img{width:30px;height:30px;}
+	.mdn-cs-icon-wrap{margin-bottom:0;}
+
 }
