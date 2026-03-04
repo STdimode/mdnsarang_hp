@@ -74,7 +74,7 @@
 .mdn-nav-list {
   display: none; /* hidden by default */
   align-items: center;
-  gap: 48px;
+  gap: 10rem;
 }
 
 @media (min-width: 768px) {
@@ -217,18 +217,22 @@
   cursor: pointer;
   background: transparent;
   border-radius: 0;
+  transition: transform 0.3s ease; /* 아이콘과 글자가 모두 포함된 전체 영역에 transition 적용 */
 }
+
+/* 카드 전체가 위로 떠오르도록 적용 */
+.mdn-welcome-card:hover {
+  transform: translateY(-8px);
+}
+
 .mdn-welcome-icon {
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
 }
-.mdn-welcome-card:hover .mdn-welcome-icon {
-  transform: translateY(-8px);
-}
+
 .mdn-welcome-card-label {
   font-size: 19px;
   color: rgba(255,255,255,0.9);
@@ -237,8 +241,7 @@
 /* Three Cards Section */
 .mdn-three-cards {
   background: white;
-  padding-top: 60px;
-  padding-bottom: 70px;
+  padding: 90px 0;
 }
 .mdn-three-cards-grid {
   max-width: 1440px;
@@ -523,17 +526,20 @@
 
 
 @media (max-width: 768px) {
+	.mdn-welcome-h2{font-size: 24px;}
 	.mdn-header{height:60px;}
-	.mdn-hero {
-	aspect-ratio:7/9;
-    height: auto;}
-	.cms-logo-img {
-    height: 30px;}
+	.mdn-hero {aspect-ratio:7/9;height: auto;}
+	.cms-logo-img {height: 30px;}
+	.mdn-welcome-cards{justify-content: center;}
+
+	.mdn-three-cards {padding: 40px 0;}
+	.mdn-church-school{padding: 40px 0;}
 	.mdn-cs-h2{font-size: 24px;}
-	.mdn-cs-card-title {
-	font-size: 22px;}
+	.mdn-cs-card-title {font-size: 22px;}
 	.mdn-cs-card{padding: 25px;}
 	.mdn-cs-icon img{width:30px;height:30px;}
 	.mdn-cs-icon-wrap{margin-bottom:0;}
+	.mdn-gallery-sec{padding: 40px 0;}
+
 
 }
