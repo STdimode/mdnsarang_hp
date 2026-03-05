@@ -1,0 +1,385 @@
+<!--
+    string layoutPath = "/UserData/nsrch/Layouts/nsrch_Layout";
+    string cssFile = layoutPath + "/Contents/Main_v1.css";
+    string jsFile = layoutPath + "/Scripts/Main_v1.js";
+    // 로컬 전환용 주석 (필요 시 해제)
+    // string localFontCss = layoutPath + "/Contents/fonts.css";
+-->
+
+<!-- <link href="fonts.css" rel="stylesheet" /> -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link href="Main_v1.css" rel="stylesheet" />
+
+<div class="cms-content-root">
+  <!-- ━━━ HEADER ━━━ -->
+  <header class="mdn-header">
+    <div class="mdn-container">
+      <!-- logo -->
+      <div class="mdn-logo-container">
+        <img class="cms-logo-img" src="/UserData/nsrch/Layouts/nsrch_Layout/images/1_logo_white.png" alt="목동늘사랑교회">
+      </div>
+      <!-- nav -->
+      <nav class="mdn-nav-list">
+        <a href="#" class="mdn-nav-link">교회 안내</a>
+        <a href="#" class="mdn-nav-link">교육 훈련</a>
+        <a href="#" class="mdn-nav-link">선교</a>
+        <a href="#" class="mdn-nav-link">자료실</a>
+      </nav>
+      <!-- hamburger -->
+      <button class="mdn-menu-btn">
+        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="white" stroke-width="2" stroke-linecap="round">
+          <line x1="1" y1="1" x2="21" y2="1"/>
+          <line x1="1" y1="8" x2="21" y2="8"/>
+          <line x1="1" y1="15" x2="21" y2="15"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ━━━ HERO ━━━ -->
+  <section class="mdn-hero">
+    <!-- Background images -->
+    <div class="mdn-hero-slides">
+      <div class="mdn-hero-slide mdn-hero-slide-active" style="background-image: url('/UserData/nsrch/Layouts/nsrch_Layout/images/1_slider.jpg');"></div>
+      <div class="mdn-hero-slide" style="background-image: url('/UserData/nsrch/Layouts/nsrch_Layout/images/2_slider.jpg');"></div>
+    </div>
+    <!-- dots -->
+    <div class="mdn-hero-dots">
+      <button class="mdn-hero-dot mdn-hero-dot-active" data-index="0" aria-label="Slide 1"></button>
+      <button class="mdn-hero-dot mdn-hero-dot-inactive" data-index="1" aria-label="Slide 2"></button>
+    </div>
+  </section>
+
+  <!-- ━━━ WELCOME ━━━ -->
+  <section class="mdn-welcome">
+    <div class="mdn-welcome-inner">
+      <div class="fade-up-init" data-delay="0">
+        <div>
+          <div class="mdn-welcome-bar"></div>
+          <h2 class="mdn-welcome-h2">welcome</h2>
+          <p class="mdn-welcome-p">
+            어제와 오늘, 내일 함께 그리스도의 지체로<br />
+            살아가는 교회, 목동늘사랑교회에 오신 것을 환영합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="fade-up-init" data-delay="150">
+        <div class="mdn-welcome-cards">
+          <!-- Card 1 -->
+          <div class="mdn-welcome-card">
+            <div class="mdn-welcome-icon">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M26 6v8"/>
+                <path d="M23.5 10h5"/>
+                <path d="M13 24l13-10 13 10"/>
+                <rect x="15" y="24" width="22" height="18"/>
+                <rect x="22" y="32" width="8" height="10"/>
+              </svg>
+            </div>
+            <span class="mdn-welcome-card-label">교회소개</span>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="mdn-welcome-card">
+            <div class="mdn-welcome-icon">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <!-- 펼쳐진 책 - 왼쪽 페이지 (라인만) -->
+                <path d="M26 20C22 18 16 17 8 18l2 20c8-1 13 0 16 2V20z" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.5"/>
+                <!-- 펼쳐진 책 - 오른쪽 페이지 (라인만) -->
+                <path d="M26 20c4-2 10-3 18-2l-2 20c-8-1-13 0-16 2V20z" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.5"/>
+                <!-- 책등 중심선 -->
+                <path d="M26 20v20" stroke="rgba(255,255,255,0.45)" stroke-width="1.2"/>
+                <!-- 십자가 - 굵게 -->
+                <line x1="26" y1="4" x2="26" y2="19" stroke="rgba(255,255,255,0.95)" stroke-width="4"/>
+                <line x1="20" y1="10" x2="32" y2="10" stroke="rgba(255,255,255,0.95)" stroke-width="4"/>
+              </svg>
+            </div>
+            <span class="mdn-welcome-card-label">예배안내</span>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="mdn-welcome-card">
+            <div class="mdn-welcome-icon">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="26" cy="14" r="5.5"/>
+                <path d="M15 38c0-6.5 4.5-12 11-12s11 5.5 11 12"/>
+                <circle cx="11" cy="19" r="4"/>
+                <path d="M4 36c0-4.5 3.2-8.5 7-8.5 1.4 0 2.7.5 3.8 1.2"/>
+                <circle cx="41" cy="19" r="4"/>
+                <path d="M48 36c0-4.5-3.2-8.5-7-8.5-1.4 0-2.7.5-3.8 1.2"/>
+              </svg>
+            </div>
+            <span class="mdn-welcome-card-label">섬기는사람들</span>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="mdn-welcome-card">
+            <div class="mdn-welcome-icon">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 14l12-5 14 5 12-5v28l-12 5-14-5-12 5V14z"/>
+                <path d="M19 9v28"/>
+                <path d="M33 14v28"/>
+                <path d="M26 14c-3.5 0-6.5 3-6.5 6.5 0 5 6.5 11 6.5 11s6.5-6 6.5-11c0-3.5-3-6.5-6.5-6.5z" fill="rgba(255,255,255,0.85)"/>
+                <circle cx="26" cy="20.5" r="2.5" fill="#1a2038" stroke="none"/>
+              </svg>
+            </div>
+            <span class="mdn-welcome-card-label">오시는길</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━ THREE CARDS ━━━ -->
+  <section class="mdn-three-cards">
+    <div class="mdn-three-cards-grid">
+      <!-- Card 1 -->
+      <div class="fade-up-init" data-delay="0">
+        <div class="mdn-card" style="background-image: url('https://images.unsplash.com/photo-1730755525622-680fa18845d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXduJTIwc3VucmlzZSUyMHNvZnQlMjBza3klMjBtb3JuaW5nJTIwZ2xvd3xlbnwxfHx8fDE3NzI1Mzg2Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral');">
+          <div class="mdn-card-overlay" style="background: linear-gradient(to bottom, rgba(10,15,25,0.15), rgba(5,10,20,0.6));"></div>
+          <div class="mdn-card-content">
+            <span class="mdn-card-tag">예배영상</span>
+            <h3 class="mdn-card-title">설교 제목입니다.</h3>
+            <p class="mdn-card-date">2026.03.01</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="fade-up-init" data-delay="120">
+        <div class="mdn-card" style="background-image: url('https://images.unsplash.com/photo-1698953186103-d0e9f99abc4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWJsZSUyMHBhZ2VzJTIwd2FybSUyMGNhbmRsZWxpZ2h0fGVufDF8fHx8MTc3MjUzODMyNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral');">
+          <div class="mdn-card-overlay" style="background: linear-gradient(to bottom, rgba(10,15,25,0.15), rgba(5,10,20,0.6));"></div>
+          <div class="mdn-card-content">
+            <span class="mdn-card-tag">예배영상</span>
+            <h3 class="mdn-card-title">설교 제목입니다.</h3>
+            <p class="mdn-card-date">2026.03.01</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="fade-up-init" data-delay="240">
+        <div class="mdn-card" style="background-image: url('https://images.unsplash.com/photo-1765620860582-f3bff18862ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWJsZSUyMHByYXllciUyMGhhbmRzJTIwd2FybSUyMGxpZ2h0fGVufDF8fHx8MTc3MjUzODUwNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral');">
+          <div class="mdn-card-overlay" style="background: linear-gradient(to bottom, rgba(15,30,80,0.15), rgba(10,20,60,0.6));"></div>
+          <div class="mdn-card-content">
+            <span class="mdn-card-tag">예배영상</span>
+            <h3 class="mdn-card-title">설교 제목입니다.</h3>
+            <p class="mdn-card-date">2026.03.01</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━ CHURCH SCHOOL ━━━ -->
+  <section class="mdn-church-school">
+    <!-- blurred background -->
+    <div class="mdn-cs-bg-wrap">
+      <div class="mdn-cs-bg" style="background-image: url('/UserData/nsrch/Layouts/nsrch_Layout/images/nxt_bg.jpg');"></div>
+    </div>
+    <!-- dark overlay for text readability -->
+    <div class="mdn-cs-overlay"></div>
+    <div class="mdn-cs-content">
+      <div class="fade-up-init" data-delay="0">
+        <h2 class="mdn-cs-h2">
+          목동늘사랑교회 교회학교
+        </h2>
+        <p class="mdn-cs-p">
+          다음세대가 신앙 안에서 건강하게 자라가도록 돕는 공동체입니다.
+        </p>
+      </div>
+
+      <div class="mdn-cs-grid">
+        <!-- Card 1 -->
+        <div class="fade-up-init" data-delay="0">
+          <div class="mdn-cs-card">
+            <div class="mdn-cs-icon-wrap">
+              <div class="mdn-cs-icon">
+                <img src="/UserData/nsrch/Layouts/nsrch_Layout/images/nxt_icon_1.svg" alt="교회학교" width="53" height="53">
+              </div>
+            </div>
+            <h4 class="mdn-cs-card-title">교회 학교</h4>
+            <p class="mdn-cs-card-desc">아이들이 말씀 안에서 믿음으로
+자라도록 돕는 부서입니다.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="fade-up-init" data-delay="120">
+          <div class="mdn-cs-card">
+            <div class="mdn-cs-icon-wrap">
+              <div class="mdn-cs-icon">
+                <img src="/UserData/nsrch/Layouts/nsrch_Layout/images/nxt_icon_2.svg" alt="차세대" width="53" height="53">
+              </div>
+            </div>
+            <h4 class="mdn-cs-card-title">차세대</h4>
+            <p class="mdn-cs-card-desc">하나님의 거룩함을 삶에 드러내며
+기도하는 공동체입니다.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="fade-up-init" data-delay="240">
+          <div class="mdn-cs-card">
+            <div class="mdn-cs-icon-wrap">
+              <div class="mdn-cs-icon">
+                <img src="/UserData/nsrch/Layouts/nsrch_Layout/images/nxt_icon_3.svg" alt="장년세대" width="53" height="53">
+              </div>
+            </div>
+            <h4 class="mdn-cs-card-title">장년세대</h4>
+            <p class="mdn-cs-card-desc">처음오신분들부터 성숙한 제자도까지
+체계적으로 돕는 부서입니다.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━ GALLERY ━━━ -->
+  <section class="mdn-gallery-sec">
+    <div style="font-family: 'Noto Sans KR', sans-serif;">
+      <div class="fade-up-init" data-delay="0">
+        <h2 class="mdn-gallery-h2">gallery</h2>
+      </div>
+
+      <!-- Full-width carousel container -->
+      <div class="mdn-gallery-container">
+        <div class="mdn-gallery-track">
+          <!-- 18 slides (3 * 6) -->
+          <!-- Slide 0 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1621341104121-d610c0dc4228?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMGFlc3RoZXRpYyUyMG1pbmltYWx8ZW58MXx8fHwxNzcyNTg0MTc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 1 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1772442363851-738a548f6c5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMHdhcm0lMjBhcmNoaXRlY3R1cmUlMjBzdW5saWdodHxlbnwxfHx8fDE3NzI1ODQyNDd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 2 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1561896299-a7e2ffeca2e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMHNhbmQlMjBkZXNlcnQlMjBkdW5lc3xlbnwxfHx8fDE3NzI1ODQxNzl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 3 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1771039621800-fb28e227575c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMHNvZnQlMjBsaWdodCUyMHdpbmRvdyUyMGN1cnRhaW58ZW58MXx8fHwxNzcyNTg0MzU2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 4 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1686806372726-388d03ff49c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMGlubGVuJTIwZmFicmljJTIwdGV4dHVyZXxlbnwxfHx8fDE3NzI1ODQxODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 5 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1650527122326-0abd4c8c0f99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMGNvZmZlZSUyMGxhdHRlJTIwYXJ0JTIwbmV1dHJhbHxlbnwxfHx8fDE3NzI1ODQyNDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 6 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1621341104121-d610c0dc4228?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMGFlc3RoZXRpYyUyMG1pbmltYWx8ZW58MXx8fHwxNzcyNTg0MTc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 7 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1772442363851-738a548f6c5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMHdhcm0lMjBhcmNoaXRlY3R1cmUlMjBzdW5saWdodHxlbnwxfHx8fDE3NzI1ODQyNDd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 8 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1561896299-a7e2ffeca2e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMHNhbmQlMjBkZXNlcnQlMjBkdW5lc3xlbnwxfHx8fDE3NzI1ODQxNzl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 9 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1771039621800-fb28e227575c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMHNvZnQlMjBsaWdodCUyMHdpbmRvdyUyMGN1cnRhaW58ZW58MXx8fHwxNzcyNTg0MzU2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 10 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1686806372726-388d03ff49c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMGlubGVuJTIwZmFicmljJTIwdGV4dHVyZXxlbnwxfHx8fDE3NzI1ODQxODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 11 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1650527122326-0abd4c8c0f99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMGNvZmZlZSUyMGxhdHRlJTIwYXJ0JTIwbmV1dHJhbHxlbnwxfHx8fDE3NzI1ODQyNDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 12 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1621341104121-d610c0dc4228?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMGFlc3RoZXRpYyUyMG1pbmltYWx8ZW58MXx8fHwxNzcyNTg0MTc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 13 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1772442363851-738a548f6c5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMHdhcm0lMjBhcmNoaXRlY3R1cmUlMjBzdW5saWdodHxlbnwxfHx8fDE3NzI1ODQyNDd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 14 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1561896299-a7e2ffeca2e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMHNhbmQlMjBkZXNlcnQlMjBkdW5lc3xlbnwxfHx8fDE3NzI1ODQxNzl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 15 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1771039621800-fb28e227575c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMHNvZnQlMjBsaWdodCUyMHdpbmRvdyUyMGN1cnRhaW58ZW58MXx8fHwxNzcyNTg0MzU2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 16 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1686806372726-388d03ff49c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMGlubGVuJTIwZmFicmljJTIwdGV4dHVyZXxlbnwxfHx8fDE3NzI1ODQxODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+          <!-- Slide 17 -->
+          <div class="mdn-gallery-slide">
+            <img src="https://images.unsplash.com/photo-1650527122326-0abd4c8c0f99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWlnZSUyMGNvZmZlZSUyMGxhdHRlJTIwYXJ0JTIwbmV1dHJhbHxlbnwxfHx8fDE3NzI1ODQyNDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" draggable="false" class="mdn-gallery-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- controls — arrows at far left/right, dots centered -->
+      <div class="mdn-gallery-controls">
+        <!-- left arrow -->
+        <button class="mdn-gallery-btn mdn-gallery-btn-prev">
+          <svg style="height: 20px;" viewBox="0 0 160 20" fill="none" preserveAspectRatio="xMinYMid meet">
+            <line x1="160" y1="10" x2="4" y2="10" stroke="#bbb" stroke-width="1.2"/>
+            <polyline points="12,3 4,10 12,17" stroke="#bbb" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <!-- dots -->
+        <div class="mdn-gallery-dots">
+          <!-- 6 dots matching array length -->
+          <button class="mdn-gallery-dot"></button>
+          <button class="mdn-gallery-dot"></button>
+          <button class="mdn-gallery-dot"></button>
+          <button class="mdn-gallery-dot"></button>
+          <button class="mdn-gallery-dot"></button>
+          <button class="mdn-gallery-dot"></button>
+        </div>
+
+        <!-- right arrow -->
+        <button class="mdn-gallery-btn mdn-gallery-btn-next">
+          <svg style="height: 20px;" viewBox="0 0 160 20" fill="none" preserveAspectRatio="xMaxYMid meet">
+            <line x1="0" y1="10" x2="156" y2="10" stroke="#bbb" stroke-width="1.2"/>
+            <polyline points="148,3 156,10 148,17" stroke="#bbb" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━━ FOOTER ━━━ -->
+  <footer class="mdn-footer">
+    <div class="mdn-footer-inner">
+      <div>
+        <p class="mdn-footer-p1">목동늘사랑교회</p>
+        <p class="mdn-footer-p2">윤찬대 담임목사</p>
+        <div class="mdn-footer-divider"></div>
+        <p class="mdn-footer-p3">
+          08016 서울특별시 양천구 신목로 19
+        </p>
+      </div>
+      <div class="mdn-footer-right">
+        <div>
+          <p class="mdn-footer-p4">
+            Copyright &copy; 2026 목동늘사랑교회
+          </p>
+          <p class="mdn-footer-p5">
+            All rights reserved. Designed by ㈜ 스데반정보.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div> <!-- /cms-content-root -->
+
+<script src="Main_v1.js"></script>

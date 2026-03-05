@@ -1,0 +1,562 @@
+/*
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/UserData/nsrch/Layouts/nsrch_Layout/fonts/NotoSansKR-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/UserData/nsrch/Layouts/nsrch_Layout/fonts/NotoSansKR-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/UserData/nsrch/Layouts/nsrch_Layout/fonts/NotoSansKR-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/UserData/nsrch/Layouts/nsrch_Layout/fonts/NotoSansKR-Bold.woff2') format('woff2');
+}
+*/
+
+/* Full-width breakout */
+.cms-content-root {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  font-family: 'Noto Sans KR', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Header & Nav */
+.mdn-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background: rgba(30,40,60,0.5);
+  height: 100px;
+}
+
+.mdn-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mdn-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+.cms-logo-img{height:50px;}
+
+.mdn-logo-text {
+  color: white;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.mdn-nav-list {
+  display: none; /* hidden by default */
+  align-items: center;
+  gap: 10rem;
+}
+
+@media (min-width: 768px) {
+  .mdn-nav-list {
+    display: flex; /* md:flex */
+  }
+}
+
+.mdn-nav-link {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.mdn-nav-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.mdn-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.mdn-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 728px;
+}
+
+.mdn-hero-slides {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.mdn-hero-slide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.mdn-hero-slide-active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.mdn-hero-dots {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mdn-hero-dot {
+  height: 4px;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mdn-hero-dot-active {
+  width: 28px;
+  background: white;
+}
+
+.mdn-hero-dot-inactive {
+  width: 10px;
+  background: rgba(255,255,255,0.45);
+}
+
+
+/* FadeUp Component Logic */
+.fade-up-init {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  height: 100%;
+}
+.fade-up-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Welcome Section */
+.mdn-welcome {
+  background: #1a2038;
+  padding: 60px 0 56px;
+}
+.mdn-welcome-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+@media (min-width: 768px) {
+  .mdn-welcome-inner {
+    flex-direction: row;
+  }
+}
+
+.mdn-welcome-bar {
+  width: 32px;
+  height: 2px;
+  background: rgba(255,255,255,0.3);
+  margin-bottom: 16px;
+}
+.mdn-welcome-h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #7ebdff;
+  margin-bottom: 14px;
+}
+.mdn-welcome-p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.7;
+  max-width: 400px;
+}
+
+.mdn-welcome-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.mdn-welcome-card {
+  border: none;
+  width: 130px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 0;
+  transition: transform 0.3s ease; /* 아이콘과 글자가 모두 포함된 전체 영역에 transition 적용 */
+}
+
+/* 카드 전체가 위로 떠오르도록 적용 */
+.mdn-welcome-card:hover {
+  transform: translateY(-8px);
+}
+
+.mdn-welcome-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mdn-welcome-card-label {
+  font-size: 19px;
+  color: rgba(255,255,255,0.9);
+}
+
+/* Three Cards Section */
+.mdn-three-cards {
+  background: white;
+  padding: 90px 0;
+}
+.mdn-three-cards-grid {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+@media (min-width: 768px) {
+  .mdn-three-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.mdn-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  border-radius: 0;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+.mdn-card-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.mdn-card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 22px;
+}
+.mdn-card-tag {
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+.mdn-card-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+.mdn-card-date {
+  color: rgba(255,255,255,0.55);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* Church School Section */
+.mdn-church-school {
+  position: relative;
+  padding: 70px 0;
+}
+.mdn-cs-bg-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.mdn-cs-bg {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  bottom: -16px;
+  left: -16px;
+  background-size: cover;
+  background-position: center;
+}
+.mdn-cs-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.35);
+  pointer-events: none;
+}
+.mdn-cs-content {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+  text-align: center;
+}
+.mdn-cs-h2 {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.mdn-cs-p {
+  color: rgba(255,255,255,0.7);
+  font-size: 17px;
+  margin-bottom: 40px;
+  word-break:keep-all;
+}
+.mdn-cs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+@media (min-width: 768px) {
+  .mdn-cs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.mdn-cs-card {
+  background: white;
+  padding: 40px 26px 34px;
+  border-radius: 0;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mdn-cs-icon-wrap {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+.mdn-cs-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mdn-cs-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+.mdn-cs-card-desc {
+  font-size: 16px;
+  color: #777;
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+/* Gallery Section */
+.mdn-gallery-sec {
+  padding: 60px 0 70px;
+  background: white;
+}
+.mdn-gallery-h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.mdn-gallery-container {
+  overflow: hidden;
+  width: 100%;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+  /* padding varies by screen size, handled by JS */
+}
+.mdn-gallery-container.dragging {
+  cursor: grabbing;
+}
+.mdn-gallery-track {
+  display: flex;
+  /* gap and transform injected by JS */
+  /* transition handled by JS */
+}
+.mdn-gallery-slide {
+  flex-shrink: 0;
+  /* width and height handled by JS */
+}
+.mdn-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.mdn-gallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 28px;
+  padding: 0 16px;
+}
+.mdn-gallery-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-shrink: 0;
+}
+.mdn-gallery-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.mdn-gallery-dot {
+  height: 4px;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.mdn-gallery-dot.active {
+  background: #4A90D9;
+}
+.mdn-gallery-dot:not(.active) {
+  background: #ccc;
+}
+
+/* Footer */
+.mdn-footer {
+  background: #000000;
+  padding: 40px 0 36px;
+}
+.mdn-footer-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .mdn-footer-inner {
+    flex-direction: row;
+  }
+}
+.mdn-footer-p1 {
+  color: rgba(255,255,255,0.95);
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+.mdn-footer-p2 {
+  color: rgba(255,255,255,0.9);
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.mdn-footer-divider {
+  width: 28px;
+  height: 1px;
+  background: rgba(255,255,255,0.25);
+  margin-bottom: 12px;
+}
+.mdn-footer-p3 {
+  color: rgba(255,255,255,0.7);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.mdn-footer-right {
+  display: flex;
+  align-items: flex-start;
+}
+@media (min-width: 768px) {
+  .mdn-footer-right {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+.mdn-footer-p4 {
+  color: rgba(255,255,255,0.65);
+  font-size: 16px;
+}
+.mdn-footer-p5 {
+  color: rgba(255,255,255,0.5);
+  font-size: 16px;
+}
+
+
+
+@media (max-width: 768px) {
+	.mdn-welcome-h2{font-size: 24px;}
+	.mdn-header{height:60px;}
+	.mdn-hero {aspect-ratio:7/9;height: auto;}
+	.cms-logo-img {height: 30px;}
+	.mdn-welcome-cards{justify-content: center;}
+
+	.mdn-three-cards {padding: 40px 0;}
+	.mdn-church-school{padding: 40px 0;}
+	.mdn-cs-h2{font-size: 24px;}
+	.mdn-cs-card-title {font-size: 22px;}
+	.mdn-cs-card{padding: 25px;}
+	.mdn-cs-icon img{width:30px;height:30px;}
+	.mdn-cs-icon-wrap{margin-bottom:0;}
+	.mdn-gallery-sec{padding: 40px 0;}
+
+
+}
