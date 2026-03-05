@@ -1,4 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
+  /* ─── Hero Slider Logic ─── */
+  const heroSlides = document.querySelectorAll('.mdn-hero-slide');
+  const heroDots = document.querySelectorAll('.mdn-hero-dot');
+  let currentHeroIdx = 0;
+  const totalHeroSlides = heroSlides.length;
+
+  if (totalHeroSlides > 0) {
+    const updateHeroSlide = (newIdx) => {
+      heroSlides[currentHeroIdx].classList.remove('mdn-hero-slide-active');
+      heroDots[currentHeroIdx].classList.remove('mdn-hero-dot-active');
+      heroDots[currentHeroIdx].classList.add('mdn-hero-dot-inactive');
+
+      currentHeroIdx = newIdx;
+
+      heroSlides[currentHeroIdx].classList.add('mdn-hero-slide-active');
+      heroDots[currentHeroIdx].classList.remove('mdn-hero-dot-inactive');
+      heroDots[currentHeroIdx].classList.add('mdn-hero-dot-active');
+    };
+
+    // Auto-advance
+    setInterval(() => {
+      const nextIdx = (currentHeroIdx + 1) % totalHeroSlides;
+      updateHeroSlide(nextIdx);
+    }, 5000); // 5 seconds interval
+
+    // Manual navigation
+    heroDots.forEach((dot) => {
+      dot.addEventListener('click', (e) => {
+        const targetIdx = parseInt(e.target.getAttribute('data-index'), 10);
+        if (targetIdx !== currentHeroIdx && !isNaN(targetIdx)) {
+          updateHeroSlide(targetIdx);
+        }
+      });
+    });
+  }
+
   /* ─── FadeUp Logic ─── */
   const fadeElements = document.querySelectorAll('.fade-up-init');
   if (fadeElements.length > 0) {

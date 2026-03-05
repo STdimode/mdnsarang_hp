@@ -1,14 +1,14 @@
-@{
+<!--
     string layoutPath = "/UserData/nsrch/Layouts/nsrch_Layout";
     string cssFile = layoutPath + "/Contents/Main_v1.css";
     string jsFile = layoutPath + "/Scripts/Main_v1.js";
     // 로컬 전환용 주석 (필요 시 해제)
     // string localFontCss = layoutPath + "/Contents/fonts.css";
-}
+-->
 
-@* <link href="@Url.Content("~" + localFontCss)" rel="stylesheet" /> *@
+<!-- <link href="fonts.css" rel="stylesheet" /> -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
-<link href="@Url.Content("~" + cssFile)" rel="stylesheet" />
+<link href="Main_v1.css" rel="stylesheet" />
 
 <div class="cms-content-root">
   <!-- ━━━ HEADER ━━━ -->
@@ -382,4 +382,4 @@
 
 </div> <!-- /cms-content-root -->
 
-<script src="@Url.Content("~" + jsFile)"></script>
+<script src="Main_v1.js"></script>
